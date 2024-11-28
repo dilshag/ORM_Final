@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="768.0" prefWidth="1130.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserFormControllerNew">
+   <children>
+      <Text layoutX="364.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage User" textAlignment="CENTER">
+         <font>
+            <Font name="Al Nile Bold" size="27.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="326.0" layoutY="239.0" onAction="#btnSaveOnAction" prefHeight="10.0" prefWidth="58.0" style="-fx-background-color: #119822;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" contentDisplay="RIGHT" layoutX="393.0" layoutY="239.0" onAction="#btnUpdateOnAction" prefHeight="10.0" prefWidth="58.0" style="-fx-background-color: #db7c26;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" contentDisplay="RIGHT" layoutX="461.0" layoutY="239.0" onAction="#btnDeleteOnAction" prefHeight="10.0" prefWidth="58.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="529.0" layoutY="239.0" onAction="#btnClearOnAction" prefHeight="10.0" prefWidth="58.0" style="-fx-background-color: #6c757d;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="46.0" layoutY="81.0" text="ID:" textFill="#a6a1a1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="548.0" layoutY="155.0" text="Password:" textFill="#a6a1a1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPassword" layoutX="651.0" layoutY="157.0" prefHeight="25.0" prefWidth="282.0" promptText="password" />
+      <Label layoutX="46.0" layoutY="152.0" text="User Name:" textFill="#a6a1a1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="158.0" layoutY="154.0" prefHeight="25.0" prefWidth="282.0" promptText="UserName" />
+      <Label layoutX="547.0" layoutY="82.0" text="User Role:" textFill="#a6a1a1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbType" layoutX="651.0" layoutY="83.0" prefHeight="25.0" prefWidth="282.0" promptText="Admin" />
+      <TableView fx:id="UserTable" layoutX="171.0" layoutY="332.0" onMouseClicked="#tblUserOnMouseClicked" prefHeight="187.0" prefWidth="821.0">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="154.0" text="UserID" />
+            <TableColumn fx:id="colUserName" prefWidth="251.0" text="User Name" />
+            <TableColumn fx:id="colUserRole" prefWidth="217.0" text="User Role" />
+
+            <TableColumn fx:id="colUserPassword" prefWidth="217.0" text="Password" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtId" layoutX="157.0" layoutY="87.0" prefHeight="25.0" prefWidth="282.0" promptText="UserID" />
+   </children>
+</AnchorPane>

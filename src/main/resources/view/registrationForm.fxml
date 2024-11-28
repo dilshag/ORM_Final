@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootStudent" opacity="0.95" prefHeight="660.0" prefWidth="890.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.RegisterFormController">
+   <children>
+      <Label layoutX="293.0" layoutY="14.0" prefHeight="64.0" prefWidth="324.0" text="Registration form" textFill="#111111">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="25.0" layoutY="364.0" prefHeight="30.0" prefWidth="840.0" />
+      <Label layoutX="39.0" layoutY="93.0" text="Registration Id:" textFill="#111111">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="StudentIDComboBox" layoutX="153.0" layoutY="129.0" onAction="#comboStudetList" prefHeight="26.0" prefWidth="179.0" />
+      <Text fx:id="studentid" fill="#111111" layoutX="40.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="studentName" fill="#168e2e" layoutX="153.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="140.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="studentMobile" fill="#168e2e" layoutX="156.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="140.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#141414" layoutX="38.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#1b1b1b" layoutX="39.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="StudentIDComboCourseComboBox" layoutX="608.0" layoutY="80.0" onAction="#comboCourseList" prefHeight="26.0" prefWidth="94.0" />
+      <Text fx:id="courseid" fill="#111111" layoutX="522.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course ID :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="courseName" fill="#2f7e3c" layoutX="606.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="140.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="CourseDuration" fill="#2f7e3c" layoutX="613.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="140.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="fee" fill="#2f7e3c" layoutX="619.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="128.80000000000007">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="text11" fill="#111111" layoutX="521.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#111111" layoutX="519.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#111111" layoutX="519.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee(LKR)">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="datecombo" layoutX="141.0" layoutY="238.0" prefHeight="28.0" prefWidth="218.0" promptText="Date" />
+      <TextField fx:id="Paymenttxt" layoutX="141.0" layoutY="296.0" prefHeight="26.0" prefWidth="218.0" />
+      <Text fx:id="payment" fill="#1b1a1a" layoutX="46.0" layoutY="314.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="payment1" fill="#0a0a0a" layoutX="547.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount Due :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="Amountduetxt" fill="#c72222" layoutX="687.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="169.2098388671875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#222121" layoutX="650.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RS.">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TableView fx:id="StudentTable" layoutX="21.0" layoutY="410.0" prefHeight="200.0" prefWidth="846.0">
+         <columns>
+            <TableColumn fx:id="colRegId" text="RegId" />
+            <TableColumn fx:id="colsid" prefWidth="86.40002822875977" text="SID" />
+            <TableColumn fx:id="colsname" prefWidth="95.199951171875" text="Student Name" />
+            <TableColumn fx:id="colProgram" prefWidth="103.99992370605469" text="Course Name" />
+            <TableColumn fx:id="coldate" prefWidth="104.79998779296875" text="Date" />
+            <TableColumn fx:id="colduration" prefWidth="101.5999755859375" text="Duration" />
+            <TableColumn fx:id="colPayment" prefWidth="104.0" text="Payment" />
+            <TableColumn fx:id="coldueAmonut" prefWidth="96.00006103515625" text="Due Amonut" />
+            <TableColumn fx:id="deleteBtn" prefWidth="72.0" text="Delete" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtId" layoutX="153.0" layoutY="90.0" prefHeight="26.0" prefWidth="179.0" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="651.0" layoutY="352.0" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="73.0" style="-fx-background-color: #119822;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" contentDisplay="RIGHT" layoutX="748.0" layoutY="352.0" onAction="#btnClearOnAction" prefHeight="24.0" prefWidth="67.0" style="-fx-background-color: #6c757d;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

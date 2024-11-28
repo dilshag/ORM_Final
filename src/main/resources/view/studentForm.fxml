@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="768.0" prefWidth="1130.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+   <children>
+      <Text layoutX="456.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Student" textAlignment="CENTER">
+         <font>
+            <Font name="Al Nile Bold" size="27.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtStudentName" layoutX="244.0" layoutY="133.0" prefHeight="24.0" prefWidth="236.0" promptText="StudentName" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="440.0" layoutY="344.0" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="58.0" style="-fx-background-color: #119822;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" contentDisplay="RIGHT" layoutX="507.0" layoutY="344.0" onAction="#btnUpdateOnAction" prefHeight="24.0" prefWidth="58.0" style="-fx-background-color: #db7c26;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" contentDisplay="RIGHT" layoutX="574.0" layoutY="344.0" onAction="#btnDeleteOnAction" prefHeight="24.0" prefWidth="58.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" contentDisplay="RIGHT" layoutX="640.0" layoutY="344.0" onAction="#btnClearOnAction" prefHeight="24.0" prefWidth="58.0" style="-fx-background-color: #6c757d;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtAddress" layoutX="244.0" layoutY="170.0" prefHeight="24.0" prefWidth="236.0" promptText="Address" />
+      <TextField fx:id="txtPhoneNumber" layoutX="647.0" layoutY="93.0" prefHeight="19.0" prefWidth="236.0" promptText="Phone Number" />
+      <TableView fx:id="tblStudent" layoutX="173.0" layoutY="413.0" onMouseClicked="#tblStudentOnMouseClicked" prefHeight="236.0" prefWidth="847.0">
+         <columns>
+            <TableColumn fx:id="colStudentID" prefWidth="91.0" text="StudentID" />
+            <TableColumn fx:id="colStudentName" prefWidth="169.0" text="StudentName" />
+            <TableColumn fx:id="colAddress" prefWidth="141.0" text="Address" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="169.0" text="PhoneNumber" />
+            <TableColumn fx:id="colEmail" prefWidth="140.0" text="Email" />
+            <TableColumn fx:id="colCoordinatorId" minWidth="0.0" prefWidth="136.0" text="Cordinator  Id" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSID" layoutX="244.0" layoutY="92.0" prefHeight="28.0" prefWidth="236.0" promptText="StudentID" />
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="422.0" layoutY="97.0" onAction="#btnSearchOnAction" prefHeight="12.0" prefWidth="52.0" style="-fx-background-color: gray;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtEmail" layoutX="648.0" layoutY="133.0" prefHeight="19.0" prefWidth="236.0" promptText="Email" />
+      <ComboBox fx:id="cmbCodinatorID" layoutX="731.0" layoutY="174.0" onAction="#cmbCodinatorOnAction" prefHeight="25.0" prefWidth="152.0" />
+      <Text layoutX="649.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cordinator Id" wrappingWidth="77.13671875" />
+   </children>
+</AnchorPane>

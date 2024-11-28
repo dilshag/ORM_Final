@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="rootNode" prefHeight="564.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="641.0" fitWidth="816.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/203d6aedc13a691413bb753d80c8583b.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c7878" height="592.0" layoutX="65.0" layoutY="25.0" opacity="0.6" stroke="#e1d3d3" strokeType="INSIDE" width="496.0">
+         <effect>
+            <BoxBlur />
+         </effect>
+      </Rectangle>
+      <Label layoutX="182.0" layoutY="230.0" prefHeight="17.0" prefWidth="170.0" text="User Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Text layoutX="187.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="      LOGIN" wrappingWidth="281.99999928846955">
+         <font>
+            <Font name="Cambria" size="48.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUserName" layoutX="180.0" layoutY="250.0" onAction="#txtUserNameOnAction" opacity="0.56" prefHeight="25.0" prefWidth="246.0" />
+      <Label layoutX="182.0" layoutY="297.0" prefHeight="17.0" prefWidth="170.0" text="Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPassword" layoutX="180.0" layoutY="317.0" onAction="#txtPasswordOnAction" opacity="0.56" prefHeight="25.0" prefWidth="246.0" />
+      <Line endX="100.0" layoutX="320.0" layoutY="171.0" startX="-100.0">
+         <effect>
+            <BoxBlur height="0.0" width="83.93" />
+         </effect>
+      </Line>
+      <JFXButton fx:id="btnLogin" layoutX="266.0" layoutY="454.0" onAction="#btnLoginOnAction" opacity="0.79" prefHeight="32.0" prefWidth="113.0" ripplerFill="#323030" style="-fx-background-color: #d9dcea; -fx-border-color: #393a7c; -fx-border-radius: 5; -fx-background-radius: 5;" text="Login" textFill="#1042b5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
